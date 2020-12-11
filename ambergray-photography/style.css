@@ -274,6 +274,7 @@ nav {
 }
 .form-wrapper label {
   display: block;
+  margin-left: 8rem;
 }
 .form-wrapper input {
   display: block;
