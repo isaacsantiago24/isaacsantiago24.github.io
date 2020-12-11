@@ -106,7 +106,7 @@ nav ul {
 #locations {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/new-york-page.png");
+    url("img/new-york-page.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -205,7 +205,7 @@ nav ul {
 #contact {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/travel2.jpg");
+    url("img/travel2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
