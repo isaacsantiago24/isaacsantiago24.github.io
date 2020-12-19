@@ -42,7 +42,7 @@ nav ul {
 /* ///////////////// HERO /////////////////////////////////////// */
 .hero {
   min-height: 90vh;
-  background-image: url("/img/fresheats-landing.jpg");
+  background-image: url("img/fresheats-landing.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -238,6 +238,7 @@ nav ul {
 .hero-two {
   min-height: 90vh;
   background-image: url("img/fresheats-img2.jpg");
+
   background-size: cover;
   background-position: center;
   color: white;
