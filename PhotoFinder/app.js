@@ -6,7 +6,7 @@ const more = document.querySelector(".more");
 let page = 1;
 let fetchLink;
 let currentSearch;
-var MY_KEY = config.MY_KEY;
+var mykey = config.MY_KEY;
 
 //Event Listeners
 searchInput.addEventListener("input", updateInput);
@@ -27,7 +27,7 @@ async function fetchApi(url) {
     method: "GET",
     headers: {
       Accept: "application/json",
-      Authorization: MY_KEY,
+      Authorization: mykey,
     },
   });
   const data = await dataFetch.json();
@@ -51,7 +51,7 @@ function generatePictures(data) {
 }
 
 async function curatedPhotos() {
-  fetchLink = "https://api.pexels.com/v1/curated?per_page=15&page=1";
+  fetchLink = "https://api.pexels.com/v1/curated?per_page=15&page=1" + mykey;
   const data = await fetchApi(fetchLink);
 
   generatePictures(data);
@@ -60,7 +60,9 @@ async function curatedPhotos() {
 //searching for specific photo
 async function searchPhotos(query) {
   clear();
-  fetchLink = `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&page=1`;
+  fetchLink =
+    `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&page=1` +
+    mykey;
   const data = await fetchApi(fetchLink);
   generatePictures(data);
 }
@@ -74,9 +76,12 @@ function clear() {
 async function loadMore() {
   page++;
   if (currentSearch) {
-    fetchLink = `https://api.pexels.com/v1/search?query=${currentSearch}+query&per_page=15&page=${page}`;
+    fetchLink =
+      `https://api.pexels.com/v1/search?query=${currentSearch}+query&per_page=15&page=${page}` +
+      mykey;
   } else {
-    fetchLink = `https://api.pexels.com/v1/curated?per_page=15&page=${page}`;
+    fetchLink =
+      `https://api.pexels.com/v1/curated?per_page=15&page=${page}` + mykey;
   }
   const data = await fetchApi(fetchLink);
   generatePictures(data);
