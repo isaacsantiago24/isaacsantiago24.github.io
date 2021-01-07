@@ -1,4 +1,3 @@
-const auth = ""; //ADD THE AUTH KEY
 const gallery = document.querySelector(".gallery");
 const searchInput = document.querySelector(".search-input");
 const form = document.querySelector(".search-form");
@@ -7,6 +6,7 @@ const more = document.querySelector(".more");
 let page = 1;
 let fetchLink;
 let currentSearch;
+var MY_KEY = config.MY_KEY;
 
 //Event Listeners
 searchInput.addEventListener("input", updateInput);
@@ -21,12 +21,13 @@ function updateInput(e) {
   searchValue = e.target.value;
 }
 
+//data fetching
 async function fetchApi(url) {
   const dataFetch = await fetch(url, {
     method: "GET",
     headers: {
       Accept: "application/json",
-      Authorization: auth,
+      Authorization: MY_KEY,
     },
   });
   const data = await dataFetch.json();
@@ -34,6 +35,7 @@ async function fetchApi(url) {
 }
 
 function generatePictures(data) {
+  //loop through photos
   data.photos.forEach((photo) => {
     const galleryImg = document.createElement("div");
     galleryImg.classList.add("gallery-img");
@@ -55,6 +57,7 @@ async function curatedPhotos() {
   generatePictures(data);
 }
 
+//searching for specific photo
 async function searchPhotos(query) {
   clear();
   fetchLink = `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&page=1`;
@@ -62,6 +65,7 @@ async function searchPhotos(query) {
   generatePictures(data);
 }
 
+//function to clear our search
 function clear() {
   gallery.innerHTML = "";
   searchInput.value = "";
