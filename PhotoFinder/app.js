@@ -51,7 +51,7 @@ function generatePictures(data) {
 }
 
 async function curatedPhotos() {
-  fetchLink = "https://api.pexels.com/v1/curated?per_page=15&page=1" + mykey;
+  fetchLink = "https://api.pexels.com/v1/curated?per_page=15&page=1";
   const data = await fetchApi(fetchLink);
 
   generatePictures(data);
@@ -60,9 +60,7 @@ async function curatedPhotos() {
 //searching for specific photo
 async function searchPhotos(query) {
   clear();
-  fetchLink =
-    `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&page=1` +
-    mykey;
+  fetchLink = `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&page=1`;
   const data = await fetchApi(fetchLink);
   generatePictures(data);
 }
@@ -76,12 +74,9 @@ function clear() {
 async function loadMore() {
   page++;
   if (currentSearch) {
-    fetchLink =
-      `https://api.pexels.com/v1/search?query=${currentSearch}+query&per_page=15&page=${page}` +
-      mykey;
+    fetchLink = `https://api.pexels.com/v1/search?query=${currentSearch}+query&per_page=15&page=${page}`;
   } else {
-    fetchLink =
-      `https://api.pexels.com/v1/curated?per_page=15&page=${page}` + mykey;
+    fetchLink = `https://api.pexels.com/v1/curated?per_page=15&page=${page}`;
   }
   const data = await fetchApi(fetchLink);
   generatePictures(data);
