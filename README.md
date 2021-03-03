@@ -5,7 +5,10 @@ Background Generator | JavaScript, HTML & CSS | https://isaacsantiago24.github.i
 
 Fresh Eats | Restaurant | HTML & CSS| https://isaacsantiago24.github.io/fresh-eats
 
-Task Manager | Javascript, HTML & CSS| https://isaacsantiago24.github.io/task-manager/
+Task Manager | JavaScript, HTML & CSS| https://isaacsantiago24.github.io/task-manager/
+
+Todo List| JavaScript HTML & CSS|
+https://isaacsantiago24.github.io/todo-list/
 
 Trip Travel | Travel Agency | HTML & CSS|
 https://isaacsantiago24.github.io/trip-travel
