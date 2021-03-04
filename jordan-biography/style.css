@@ -28,6 +28,12 @@ nav ul {
   list-style: none;
   cursor: pointer;
   position: sticky;
+  top: 0px;
+}
+
+header {
+  position: sticky;
+  top: 0;
 }
 
 .hero {
