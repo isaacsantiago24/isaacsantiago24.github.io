@@ -5,6 +5,8 @@ Background Generator | JavaScript, HTML & CSS | https://isaacsantiago24.github.i
 
 Fresh Eats | Restaurant | HTML & CSS| https://isaacsantiago24.github.io/fresh-eats
 
+Photo Finder | JavaScript, HTML & CSS | https://isaacsantiago24.github.io/photo-finder/
+
 Task Manager | JavaScript, HTML & CSS| https://isaacsantiago24.github.io/task-manager/
 
 Todo List| JavaScript HTML & CSS|
